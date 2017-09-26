@@ -85,12 +85,13 @@ namespace RabbitMQApp.RabbitMQHelper
             return messageList;
         }
 
-        public void WriteMessageOnQueue(string message, string queueName, IConnection connection)
+        public bool WriteMessageOnQueue(string message, string queueName, IConnection connection)
         {
             using (var channel = connection.CreateModel())
             {
                 channel.BasicPublish(string.Empty, queueName, null, Encoding.ASCII.GetBytes(message));
             }
+            return true;
         }
     }
 }

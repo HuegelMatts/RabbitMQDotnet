@@ -17,6 +17,6 @@ namespace RabbitMQApp.RabbitMQHelper
 
         List<string> RetrieveMessageList(string queueName, IConnection connection);
 
-        void WriteMessageOnQueue(string message, string queueName, IConnection connection);
+        bool WriteMessageOnQueue(string message, string queueName, IConnection connection);
     }
 }

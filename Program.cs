@@ -41,13 +41,12 @@ namespace RabbitMQApp
                 Console.WriteLine(" ");
 
                 // Writing Messages to a Queue
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 50000; i++)
                 {
                     var newmessage = $"New Message Generated on: {DateTime.Now:dd/MM/yyyy HH:mm:ss:fff}";
 
                     obj.WriteMessageOnQueue(newmessage, queueName, connection);
-                    Console.WriteLine($"Message Successfully Written: {newmessage}");
-                    Thread.Sleep(20);
+                    //Console.WriteLine($"Message Successfully Written: {newmessage}");
                 }
                 Console.WriteLine(" ");
 
@@ -59,10 +58,10 @@ namespace RabbitMQApp
 
                 // Retrieving Multiple Messages
                 var lstMessages = obj.RetrieveMessageList(queueName, connection);
-                foreach (var m in lstMessages)
-                {
-                    Console.WriteLine($"Message Text: {m} ");
-                }
+                //foreach (var m in lstMessages)
+                //{
+                //    Console.WriteLine($"Message Text: {m} ");
+                //}
                 Console.WriteLine(" ");
             }
             finally
