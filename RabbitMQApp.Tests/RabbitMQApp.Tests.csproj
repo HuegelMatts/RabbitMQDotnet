@@ -75,7 +75,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RabbitMQApp.csproj">
+    <ProjectReference Include="..\RabbitMQDotnet\RabbitMQApp.csproj">
       <Project>{0a37a02c-4461-49fd-b66e-b123f6b9769a}</Project>
       <Name>RabbitMQApp</Name>
     </ProjectReference>
