@@ -21,6 +21,9 @@ namespace RabbitMQApp.Tests
 
             // Assert
             Assert.True(ret);
+
+            connection.Close();
+            connection.Dispose();
         }
 
         [Fact]
@@ -37,6 +40,9 @@ namespace RabbitMQApp.Tests
 
             // Assert
             Assert.True(ret != null);
+
+            connection.Close();
+            connection.Dispose();
         }
 
         [Fact]
@@ -53,6 +59,9 @@ namespace RabbitMQApp.Tests
 
             // Assert
             Assert.True(ret != null);
+
+            connection.Close();
+            connection.Dispose();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace RabbitMQApp.RabbitMQHelper
         {
             var connectionFactory = new ConnectionFactory
             {
-                HostName = "localhost",
+                HostName = "127.0.0.1",
                 UserName = "guest",
                 Password = "guest"
             };

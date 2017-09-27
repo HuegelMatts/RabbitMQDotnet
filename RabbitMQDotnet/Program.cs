@@ -22,7 +22,7 @@ namespace RabbitMQApp
 
                 // Creating IOC Container
                 var container = UnityConfig.GetMainContainer();
-                var obj = container.Resolve<RabbitMqHelper>();
+                var obj = container.Resolve<IRabbitMQHelper>();
 
                 // Creating Connection and Connection Factory
                 var connectionFactory = obj.GetConnectionFactory();

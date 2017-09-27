@@ -33,6 +33,9 @@ namespace RabbitMQApp.Tests
 
             // Assert
             Assert.True(connection != null);
+
+            connection.Close();
+            connection.Dispose();
         }
     }
 }
